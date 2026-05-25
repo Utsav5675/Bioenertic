@@ -434,7 +434,7 @@ footer {
         onsubmit="return validateForm()">
 
         <input type="hidden" name="oid" value="00Dd500000FxESv">
-        <input type="hidden" name="retURL" value="https://bioenertec.com/contact">
+        <input type="hidden" name="retURL" value="https://utsav5675.github.io/Bioenertic/?submitted=1">
         <input type="hidden" name="lead_source" value="Web">
 
         <div class="form-row-2">
@@ -551,6 +551,19 @@ function validateForm() {
     return false;
   }
   return true;
+}
+
+// Show success message if redirected back after Salesforce submission
+if (window.location.search.includes('submitted=1')) {
+  document.addEventListener('DOMContentLoaded', function() {
+    const formBody = document.getElementById('form-body');
+    const successBox = document.getElementById('success-box');
+    if (formBody && successBox) {
+      formBody.style.display = 'none';
+      successBox.style.display = 'block';
+      document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' });
+    }
+  });
 }
 </script>
 </body>
