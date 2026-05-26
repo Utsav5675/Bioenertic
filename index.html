@@ -52,7 +52,7 @@ nav { background: var(--white); border-bottom: 1px solid var(--border); position
 .hero-image img { width: 100%; height: 420px; object-fit: cover; object-position: center top; display: block; border-radius: 2px; }
 .hero-content { display: flex; flex-direction: column; justify-content: center; padding: 60px 64px 60px 40px; background: var(--white); }
 .hero-tag { font-size: 12px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--orange); margin-bottom: 20px; }
-.hero-content h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3vw, 42px); font-weight: 600; color: var(--navy); line-height: 1.2; margin-bottom: 28px; }
+.hero-content h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 3.2vw, 46px); font-weight: 600; color: var(--navy); line-height: 1.2; margin-bottom: 28px; }
 .btn-faqs { display: inline-flex; align-items: center; gap: 8px; background: var(--navy); color: #fff; padding: 13px 28px; border-radius: 4px; font-size: 14px; font-weight: 500; letter-spacing: .5px; text-decoration: none; width: fit-content; transition: background .2s, transform .15s; }
 .btn-faqs:hover { background: var(--teal); transform: translateY(-1px); }
 
@@ -176,9 +176,9 @@ footer { background: var(--white); border-top: 1px solid var(--border); }
       onerror="this.src='https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&q=80&fit=crop';">
   </div>
   <div class="hero-content">
-    <p class="hero-tag">Customer Support</p>
-    <h1>Questions?<br>We're Here<br>To Help...</h1>
-    <a href="#contact-form" class="btn-faqs">Read FAQs</a>
+    <p class="hero-tag">Questions?</p>
+    <h1>We're Here To Help With Sizing, Stylingand Anything Else, 3 Year Warranty, Extended 90 Day Returns, Expedited Shipping</h1>
+    <a href="#contact-form" class="btn-faqs">Read Faqs</a>
   </div>
 </div>
 
@@ -220,75 +220,45 @@ footer { background: var(--white); border-top: 1px solid var(--border); }
   <div class="form-section-inner">
     <h2>Got Any Questions?</h2>
     <p class="sub">Use the form below to get in touch with the sales team</p>
-
     <div id="form-body">
       <form class="contact-form"
         action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Dd500000FxESv"
         method="POST">
-
         <input type="hidden" name="oid" value="00Dd500000FxESv">
         <input type="hidden" name="retURL" value="https://utsav5675.github.io/Bioenertic/?submitted=1">
         <input type="hidden" name="lead_source" value="Web">
-
-        <!-- Row 1: Name | Last Name -->
         <div class="form-row-2">
-          <div class="form-field">
-            <input type="text" id="first_name" name="first_name" placeholder="Name" required>
-          </div>
-          <div class="form-field">
-            <input type="text" id="last_name" name="last_name" placeholder="Last Name">
-          </div>
+          <div class="form-field"><input type="text" id="first_name" name="first_name" placeholder="Name" required></div>
+          <div class="form-field"><input type="text" id="last_name" name="last_name" placeholder="Last Name"></div>
         </div>
-
-        <!-- Row 2: Email | Phone -->
         <div class="form-row-2">
-          <div class="form-field">
-            <input type="email" id="email" name="email" placeholder="Email" required>
-          </div>
-          <div class="form-field">
-            <input type="tel" id="phone" name="phone" placeholder="Phone Number">
-          </div>
+          <div class="form-field"><input type="email" id="email" name="email" placeholder="Email" required></div>
+          <div class="form-field"><input type="tel" id="phone" name="phone" placeholder="Phone Number"></div>
         </div>
-
-        <!-- Row 3: Company | Product Category -->
         <div class="form-row-2">
+          <div class="form-field"><input type="text" id="company" name="company" placeholder="Company Name"></div>
           <div class="form-field">
-            <input type="text" id="company" name="company" placeholder="Company Name">
-          </div>
-          <div class="form-field">
-            <!-- CORRECT field ID from your Salesforce Web-to-Lead -->
-            <select id="00Nd500000FGrvl" name="00Nd500000FGrvl" title="Product Categories">
+            <select id="00Nd500000GlZU9" name="00Nd500000GlZU9">
               <option value="">Product Category</option>
-              <option value="PVC Thermal Roofing">PVC Thermal Roofing</option>
-              <option value="Pipes">Pipes</option>
-              <option value="PVC Compounds">PVC Compounds</option>
-              <option value="Septic Tank">Septic Tank</option>
-              <option value="Grease Trap">Grease Trap</option>
-              <option value="Natural Health Supplements">Natural Health Supplements</option>
               <option value="Turmeric Supplements">Turmeric Supplements</option>
+              <option value="Anti-Inflammatory Products">Anti-Inflammatory Products</option>
+              <option value="Natural Health Supplements">Natural Health Supplements</option>
               <option value="Wellness Products">Wellness Products</option>
               <option value="Wholesale / Bulk Order">Wholesale / Bulk Order</option>
+              <option value="OEM / Private Label">OEM / Private Label</option>
               <option value="Other">Other</option>
             </select>
           </div>
         </div>
-
-        <!-- Message full width -->
         <div style="margin-bottom:16px;">
-          <textarea name="description" placeholder="Message"
-            style="width:100%;padding:14px 16px;border:1.5px solid var(--border);border-radius:4px;font-family:'Jost',sans-serif;font-size:14px;color:var(--text);background:var(--white);outline:none;resize:vertical;min-height:120px;transition:border-color .2s;"
-            onfocus="this.style.borderColor='var(--navy)'"
-            onblur="this.style.borderColor='var(--border)'"></textarea>
+          <textarea name="description" placeholder="Message" style="width:100%;padding:14px 16px;border:1.5px solid var(--border);border-radius:4px;font-family:'Jost',sans-serif;font-size:14px;color:var(--text);background:var(--white);outline:none;resize:vertical;min-height:120px;transition:border-color .2s;" onfocus="this.style.borderColor='var(--navy)'" onblur="this.style.borderColor='var(--border)'"></textarea>
         </div>
-
         <button type="submit" class="btn-send">
           Send
           <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </button>
       </form>
     </div>
-
-    <!-- SUCCESS BOX -->
     <div class="success-box" id="success-box">
       <div class="check-icon">
         <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
@@ -304,7 +274,7 @@ footer { background: var(--white); border-top: 1px solid var(--border); }
   <div class="footer-main">
     <div class="footer-brand">
       <h3>BioEnertec</h3>
-      <p>BioEnertec, a revolutionary Singapore bioceuticals company. We are on a mission to co-develop and market all-natural health supplements that will transform your well-being.</p>
+      <p>BioEnertec, a revolutionary Singapore bioceuticals company. We are on a mission to co-develop and market all-natural health supplements that will transform your well-being. Say goodbye to 'Yesterday's Science' — we are here to bridge the gap and conquer today's toughest health challenges.</p>
     </div>
     <div class="footer-col">
       <h4>Main Menu</h4>
